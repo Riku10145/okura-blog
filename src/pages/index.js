@@ -7,7 +7,8 @@ import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
-import ButtonUsage from "../../components/Button";
+import SearchBar from "../../components/Search";
+import { Header } from "../../components/Header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,7 +31,9 @@ export default function Home({ blog }) {
           href="https://fonts.googleapis.com/icon?family=Material+Icons"
         />
       </Head>
-
+      <Header />
+      <SearchBar />
+      <nav>nav</nav>
       <main className={`${styles.main} ${inter.className}`}>
         <div>
           <ul>
@@ -41,8 +44,8 @@ export default function Home({ blog }) {
             ))}
           </ul>
         </div>
-        <ButtonUsage />
       </main>
+      <aside>aside</aside>
     </>
   );
 }
