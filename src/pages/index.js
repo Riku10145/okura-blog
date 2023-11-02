@@ -8,6 +8,7 @@ import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 import { Header } from "../../components/Header";
+import { Footer } from "../../components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -46,9 +47,7 @@ export default function Home({ blog }) {
           </div>
         </main>
         <hr></hr>
-        <footer className={styles.footer}>
-          &copy; okura blog. All Rights Reserved 2023
-        </footer>
+        <Footer />
       </div>
     </>
   );

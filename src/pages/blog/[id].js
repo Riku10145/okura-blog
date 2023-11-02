@@ -1,3 +1,4 @@
+import { Footer } from "../../../components/Footer";
 import { Header } from "../../../components/Header";
 import { client } from "../../../libs/client";
 
@@ -16,6 +17,8 @@ export default function BlogId({ blog }) {
         }}
       />
     </main>
+    <hr></hr>
+    <Footer />
     </>
   );
 }
