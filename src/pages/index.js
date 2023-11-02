@@ -7,6 +7,7 @@ import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
+import { Header } from "../../components/Header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -31,9 +32,7 @@ export default function Home({ blog }) {
       </Head>
 
       <div className={styles.container}>
-        <Link href={"/"}>
-          <header className={styles.header}>オクラのブログ</header>
-        </Link>
+        <Header />
         <hr></hr>
         <main className={`${styles.main} ${inter.className}`}>
           <div>
