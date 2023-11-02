@@ -7,9 +7,6 @@ import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
-import SearchBar from "../../components/Search";
-import { Header } from "../../components/Header";
-import styled from "@emotion/styled";
 
 const inter = Inter({ subsets: ["latin"] });
 
