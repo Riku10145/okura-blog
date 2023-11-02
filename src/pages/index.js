@@ -9,6 +9,7 @@ import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 import SearchBar from "../../components/Search";
 import { Header } from "../../components/Header";
+import styled from "@emotion/styled";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -31,21 +32,28 @@ export default function Home({ blog }) {
           href="https://fonts.googleapis.com/icon?family=Material+Icons"
         />
       </Head>
-      <Header />
-      <SearchBar />
-      <nav>nav</nav>
-      <main className={`${styles.main} ${inter.className}`}>
-        <div>
-          <ul>
-            {blog.map((blog) => (
-              <li key={blog.id}>
-                <Link href={`/blog/${blog.id}`}>{blog.title}</Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </main>
-      <aside>aside</aside>
+
+      <div className={styles.container}>
+        <Link href={"/"}>
+          <header className={styles.header}>オクラのブログ</header>
+        </Link>
+        <hr></hr>
+        <main className={`${styles.main} ${inter.className}`}>
+          <div>
+            <ul>
+              {blog.map((blog) => (
+                <li key={blog.id}>
+                  <Link href={`/blog/${blog.id}`}>{blog.title}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </main>
+        <hr></hr>
+        <footer className={styles.footer}>
+          &copy; okura blog. All Rights Reserved 2023
+        </footer>
+      </div>
     </>
   );
 }
