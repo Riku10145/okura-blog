@@ -33,21 +33,17 @@ export default function Home({ blog }) {
         />
       </Head>
 
-      <div className="mx-auto prose">
+      <div>
         <Header />
-        <hr></hr>
-        <main>
-          <div>
-            <ul>
+        <main  className="mt-8 mx-auto max-w-prose h-screen">
+            <ul className="mt-4 space-y-4">
               {blog.map((blog) => (
-                <li key={blog.id}>
+                <li key={blog.id} className="text-blue-800 hover:text-blue-600 underline">
                   <Link href={`/blog/${blog.id}`}>{blog.title}</Link>
                 </li>
               ))}
             </ul>
-          </div>
         </main>
-        <hr></hr>
         <Footer />
       </div>
     </>
