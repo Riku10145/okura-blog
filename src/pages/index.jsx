@@ -33,10 +33,10 @@ export default function Home({ blog }) {
         />
       </Head>
 
-      <div className="mx-auto max-w-prose">
+      <div className="mx-auto prose">
         <Header />
         <hr></hr>
-        <main className="h-52 ">
+        <main>
           <div>
             <ul>
               {blog.map((blog) => (
