@@ -7,7 +7,6 @@ export default function BlogId({ blog }) {
   return (
     <>
     <Header />
-    <hr></hr>
     <main>
       <h1>{blog.title}</h1>
       <p>{blog.publishedAt}</p>
@@ -17,7 +16,6 @@ export default function BlogId({ blog }) {
         }}
       />
     </main>
-    <hr></hr>
     <Footer />
     </>
   );
