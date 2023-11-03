@@ -1,5 +1,4 @@
 {
-    "editor.quickSuggestions": {
-        "strings": "on"
-    }
+    "editor.quickSuggestions": { "strings": "on"},
+    "editor.codeActionsOnSave": ["source.fixALL.eslint"]
 }
