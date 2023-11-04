@@ -1,6 +1,6 @@
 import { createClient } from 'microcms-js-sdk';
 
 export const client = createClient({
-  serviceDomain: 'okura-blog',
+  serviceDomain: okura-blog,
   apiKey: process.env.API_KEY,
 });
