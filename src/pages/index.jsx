@@ -9,11 +9,10 @@ import "@fontsource/roboto/700.css";
 import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer";
 
-
-
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home({ blog }) {
+  console.log(blog);
   return (
     <>
       <Head>
@@ -35,14 +34,15 @@ export default function Home({ blog }) {
 
       <div>
         <Header />
-        <main  className="mt-8 mx-auto max-w-prose h-screen">
-            <ul className="mt-4 space-y-4">
-              {blog.map((blog) => (
+        <main className="mt-8 mx-auto max-w-prose h-screen">
+          <ul className="mt-4 space-y-4">
+            {blog.map((blog) => (
                 <li key={blog.id} className="text-blue-800 hover:text-blue-600 underline">
+                    {blog.img ? (<img src={blog.img.url} className="w-56 h-40 inline-block m-2"/>) : null}
                   <Link href={`/blog/${blog.id}`}>{blog.title}</Link>
                 </li>
-              ))}
-            </ul>
+            ))}
+          </ul>
         </main>
         <Footer />
       </div>
