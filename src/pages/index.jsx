@@ -38,8 +38,9 @@ export default function Home({ blog }) {
           <ul className="mt-4 space-y-4">
             {blog.map((blog) => (
                 <li key={blog.id} className="text-blue-800 hover:text-blue-600 underline">
+                  <Link href={`/blog/${blog.id}`}>
                     {blog.img ? (<img src={blog.img.url} className="w-56 h-40 inline-block m-2"/>) : null}
-                  <Link href={`/blog/${blog.id}`}>{blog.title}</Link>
+                  {blog.title}</Link>
                 </li>
             ))}
           </ul>
