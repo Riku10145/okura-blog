@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { Inter } from "next/font/google";
 import Link from "next/link";
 import { client } from "../../libs/client";
 import "@fontsource/roboto/300.css";
@@ -8,8 +7,6 @@ import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export default function Home({ blog }) {
   console.log(blog);
@@ -36,9 +33,11 @@ export default function Home({ blog }) {
         <Header />
         <main className="mt-8 mx-auto max-w-prose h-screen">
           <ul className="mt-4 space-y-4">
+            {/* ブログ記事を表示 */}
             {blog.map((blog) => (
                 <li key={blog.id} className="text-blue-800 hover:text-blue-600 underline">
                   <Link href={`/blog/${blog.id}`}>
+                    {/* ブログ記事内の画像の表示 */}
                     {blog.img ? (<img src={blog.img.url} className="w-56 h-40 inline-block m-2"/>) : null}
                   {blog.title}</Link>
                 </li>
@@ -50,7 +49,7 @@ export default function Home({ blog }) {
     </>
   );
 }
-
+// ブログ記事の取得
 export const getStaticProps = async () => {
   const data = await client.get({ endpoint: "blog" });
   return {
@@ -59,3 +58,4 @@ export const getStaticProps = async () => {
     },
   };
 };
+

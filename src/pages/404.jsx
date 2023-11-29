@@ -1,6 +1,7 @@
+//エラーページを作成
 import Link from "next/link";
 
-export default function Custom404() {
+export default function Error404() {
     return (
       <main className="main">
         <p>ページがありません。</p>
