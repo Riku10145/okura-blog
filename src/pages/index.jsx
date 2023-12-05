@@ -35,7 +35,7 @@ export default function Home({ blog }) {
           <ul className="mt-4 space-y-4">
             {/* ブログ記事を表示 */}
             {blog.map((blog) => (
-                <li key={blog.id} className="text-blue-800 hover:text-blue-600 underline">
+                <li key={blog.id} className=" text-l hover:text-gray-400">
                   <Link href={`/blog/${blog.id}`}>
                     {/* ブログ記事内の画像の表示 */}
                     {blog.img ? (<img src={blog.img.url} className="w-56 h-40 inline-block m-2"/>) : null}
