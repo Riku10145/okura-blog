@@ -7,6 +7,7 @@ import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer";
+import { Search } from "../../components/Search";
 
 export default function Home({ blog }) {
   console.log(blog);
@@ -31,6 +32,10 @@ export default function Home({ blog }) {
 
       <div>
         <Header />
+        
+        {/* 検索コンポーネント */}
+        <Search />
+
         <main className="mt-8 mx-auto max-w-prose h-screen">
           <ul className="mt-4 space-y-4">
             {/* ブログ記事を表示 */}
