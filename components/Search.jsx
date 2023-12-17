@@ -2,8 +2,8 @@ import algoliasearch from "algoliasearch/lite";
 import { InstantSearch, SearchBox, Hits, Highlight } from "react-instantsearch";
 
 const algoliaClient = algoliasearch(
-  "QK9FGM420D",
-  "fbb5245096f49688b05787207777ea0d"
+  process.env.NEXT_PUBLIC_ALGOLIA_APPLICATION_ID,
+  process.env.NEXT_PUBLIC_ALGOLIA_SEARCH_API_KEY
 );
 
 
