@@ -36,9 +36,11 @@ export function Hit({ hit }) {
   return (
     <article>
       <h1>
-      <Highlight attribute="name" hit={hit} />
+      <Highlight attribute="title" hit={hit} />
       </h1>
-      <p>{hit.body}</p>
+      <p>
+      <Highlight attribute="body" hit={hit} />
+      </p>
     </article>
   );
 }
